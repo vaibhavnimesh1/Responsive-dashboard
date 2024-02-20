@@ -1,0 +1,253 @@
+.dashboard {
+  display: grid;
+  grid-template-columns: 3fr 9fr;
+  width: 96%;
+  font-family: "Roboto", sans-serif;
+
+  background: black;
+  gap: 10px;
+  border-radius: 10px;
+  padding: 10px;
+  height: 96vh;
+  border: 1px solid black;
+}
+.cross {
+  display: none;
+}
+
+.left {
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+  width: 100px;
+  position: relative;
+}
+.logo p {
+  font-size: 24px;
+  font-weight: 500;
+}
+.ham {
+  width: 24px;
+  z-index: 999;
+  position: absolute;
+}
+.ham img {
+  width: 100%;
+}
+
+.logo img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.left-bar {
+  display: block;
+  display: flex;
+  position: relative;
+  border: 2px solid black;
+  overflow: hidden;
+
+  gap: 20px;
+  flex-direction: column;
+  background: #dadada;
+  border-radius: 10px;
+  /* padding: 10px; */
+  font-size: 20px;
+}
+.left-bar ul li Link {
+  text-decoration: none;
+  color: inherit;
+}
+.left-bar ul li {
+  text-align: center;
+  cursor: pointer;
+  list-style: none;
+  padding: 30px 50px;
+  transition: all 1s;
+  list-style: none;
+
+  border-bottom: 1px solid beige;
+}
+.left-bar ul li:hover {
+  background: grey;
+}
+
+.logout {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.right {
+  background: #dadada;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid black;
+}
+.right-bar {
+  background: lightpink;
+  border-radius: 10px;
+  padding: 10px;
+  overflow: hidden;
+}
+.footer{
+  display: none;
+}
+.left-bar a{
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
+
+/* ************************************************contact  */
+.contact {
+  width: 100%;
+}
+
+.contact h1 {
+  margin-bottom: 20px;
+}
+.contact .form {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.contact .form button:hover {
+  background: black;
+  color: white;
+}
+.contact .form button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  background: grey;
+  border: 0px;
+  transition: all 0.5s;
+}
+
+.contact .form label {
+  border: 0px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.contact .form input,
+textarea {
+  padding: 14px;
+  border: 0px;
+  border-radius: 10px;
+  font-size: 18px;
+  width: 100%;
+  outline: none;
+}
+.contact .form textarea {
+  width: 100%;
+  min-height: 300px;
+}
+
+/* ************************************************contact  */
+
+@media only screen and (max-width: 1000px) {
+  .logo p {
+    display: none;
+  }
+
+  .left-bar .logo {
+    /* margin: 0 auto; */
+  }
+}
+@media only screen and (max-width: 700px) {
+  .left-bar ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .left-bar {
+    display: none;
+    /* position: absolute; */
+    /* width: 91%; */
+    /* position: fixed; */
+    /* border-radius: 0; */
+    /* height: 100%; */
+  }
+
+  .dashboard {
+    position: relative;
+    display: flex;
+    grid-template-columns: 12fr;
+  }
+  .logout {
+    position: relative;
+  }
+  .logo {
+    height: 80px;
+    width: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  /* .right {
+    padding: 30px 0 0 0;
+  } */
+  .cross {
+    display: block;
+    position: absolute;
+    /* right: 10px; */
+  }
+  .footer{
+    display: flex;
+    position: absolute;
+    bottom: 11px;
+    display: flex;
+    width: 100%;
+    left: 0;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 50px;
+    background: black;
+  }
+  .footer li a {
+    text-decoration: none;
+    color: inherit;
+  }
+  .footer  li {
+    background: black;
+    text-align: center;
+    cursor: pointer;
+    list-style: none;
+    /* padding: 30px 50px; */
+    transition: all 1s;
+    list-style: none;
+    color: white;
+    font-size: 18px;
+  
+    border-bottom: 1px solid beige;
+  }
+  .footer ul li:hover {
+    background: grey;
+  }
+ 
+}
+
+
+
+@media only screen and (max-width: 370px) {
+  .footer li:nth-last-child(1){
+    display: none;
+  }
+
+}
